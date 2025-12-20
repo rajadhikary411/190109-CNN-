@@ -1,6 +1,6 @@
 # Vehicles & Animals Image Classification with CIFAR-10
 
-This project implements a complete Convolutional Neural Network (CNN) image classification pipeline using PyTorch.  
+This project implements a complete CNN image classification pipeline using PyTorch, trained on the CIFAR-10 dataset and evaluated on both the standard test set and real-world smartphone images.
 The model is trained on the CIFAR-10 dataset and evaluated on real-world smartphone images to analyze generalization performance.
 
 ---
@@ -11,7 +11,7 @@ The model is trained on the CIFAR-10 dataset and evaluated on real-world smartph
   airplane, automobile, bird, cat, deer, dog, frog, horse, ship, truck
 
 - **Custom Dataset:**  
-  Real-world smartphone images captured by the author and stored in `data/custom`.
+  Real-world smartphone images captured by the author(some from internet) and stored in `data/custom`.
 
 ---
 
@@ -40,24 +40,92 @@ The model is trained on the CIFAR-10 dataset and evaluated on real-world smartph
 - Training loss and accuracy visualized across epochs
 
 ---
+**Training Results**
 
+The model was trained for 10 epochs on the CIFAR-10 training set.
+
+Training Logs (Final Epoch)
+Epoch [10/10] Loss: 0.2490, Acc: 0.9132
+
+<img width="471" height="271" alt="image" src="https://github.com/user-attachments/assets/057a6eef-3587-455d-9c47-c31babea871f" />
+
+
+**Observations**
+
+Training loss decreases steadily across epochs
+
+Training accuracy increases consistently
+
+**Final training accuracy ≈ 91.3%**
+---
+
+**Training Plots**
+
+The following plots were generated automatically during training:
+
+Training Loss vs Epochs
+
+Shows smooth and stable convergence
+
+
+Training Accuracy vs Epochs
+
+Accuracy increases from ~73% to over 91%
+
+<img width="1212" height="581" alt="image" src="https://github.com/user-attachments/assets/ef73a218-ea2d-43e0-9165-b3097d3b8476" />
+
+
+These plots demonstrate effective learning behavior and stable optimization.
 ## Evaluation & Results
-- Confusion Matrix generated on CIFAR-10 test set
-- Visual Error Analysis performed using misclassified samples
-- Real-world testing conducted using smartphone images
+Confusion Matrix
 
-For each custom image, the model outputs:
-- Predicted class label
-- Softmax confidence score
+A confusion matrix was generated on the CIFAR-10 test dataset to analyze per-class performance.
+
+<img width="667" height="577" alt="image" src="https://github.com/user-attachments/assets/c2ab1005-f774-4430-880c-c07c9354aa4d" />
+
+**Key Observations**
+
+Strong performance on structured object classes (automobile, truck, ship)
+
+Some confusion among visually similar animal classes (cat, dog, deer, bird)
+
+This behavior is expected due to CIFAR-10’s low resolution (32×32)
+
+**Visual Error Analysis**
+
+Three misclassified samples from the CIFAR-10 test set were visualized, showing:
+
+<img width="799" height="309" alt="image" src="https://github.com/user-attachments/assets/b75028a4-e28e-4d45-8381-a9b8f87c91c6" />
 
 ---
+Real-World Smartphone Image Predictions
 
-## Real-World Testing Observation
-The model demonstrates strong performance on structured objects such as automobiles and trucks.  
-Some confusion occurs between visually similar animal classes (e.g., bird and cat), highlighting domain shift and resolution limitations of CIFAR-10.
+The trained model was evaluated on custom smartphone images stored in data/custom.
+
+For each image, the system automatically outputs:
+<img width="1147" height="436" alt="image" src="https://github.com/user-attachments/assets/6f8a6772-bb22-465e-9488-000c2c8990e5" />
+
+
+**Observations**
+
+Vehicles (automobile, truck, ship) are classified with high confidence
+
+Animal classes occasionally show confusion (e.g., bird vs cat)
+
+Confidence scores vary due to domain shift between CIFAR-10 and real-world images
+
+This analysis highlights common failure cases and demonstrates the model’s limitations on fine-grained object details.
 
 ---
+**Key Takeaways**
 
+The CNN successfully learns CIFAR-10 visual patterns
+
+Training behavior is stable and well-converged
+
+Real-world testing highlights domain differences and generalization limits
+
+The project demonstrates an end-to-end deep learning workflow using PyTorch
 ## How to Run (Google Colab)
 1. Clone the repository:
    ```bash
@@ -67,5 +135,5 @@ Some confusion occurs between visually similar animal classes (e.g., bird and ca
 3. Select Runtime → Run all
 
 No manual file uploads are required.
-***Author***
+**Author**
 **Foysal Emon Shanto**
