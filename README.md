@@ -56,7 +56,7 @@ Training loss decreases steadily across epochs
 
 Training accuracy increases consistently
 
-**Final training accuracy ≈ 91.3%**
+*Final training accuracy ≈ 91.3%*
 ---
 
 **Training Plots**
@@ -98,7 +98,7 @@ Three misclassified samples from the CIFAR-10 test set were visualized, showing:
 <img width="799" height="309" alt="image" src="https://github.com/user-attachments/assets/b75028a4-e28e-4d45-8381-a9b8f87c91c6" />
 
 ---
-Real-World Smartphone Image Predictions
+**Real-World Smartphone Image Predictions**
 
 The trained model was evaluated on custom smartphone images stored in data/custom.
 
