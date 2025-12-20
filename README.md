@@ -17,16 +17,8 @@ The model is trained on the CIFAR-10 dataset and evaluated on real-world smartph
 
 ## Project Structure
 
-Vehicles-Animals-Image-Classification-with-CIFAR-10/
-│
-├── data/
-│ └── custom/ # Custom smartphone images
-│
-├── model/
-│ └── cnn_cifar10.pth # Saved trained model
-│── CNN_Image_Classification.ipynb
-│
-└── README.md
+
+<img width="536" height="316" alt="image" src="https://github.com/user-attachments/assets/bff7c293-0c9d-4fba-b39d-17bf3eea60c1" />
 
 ---
 
